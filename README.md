@@ -90,13 +90,13 @@ OpenGL, DirectX, WebGL. CUDA, GLSL
         * RST - resets the connection
         * SYN - synchronizes sequence number to initiate the connection
         * FIN - means the sender has finished data transmission
-    4. Window size
+    7. Window size
       * It determines the size of the senders receive window. The field pretty much tell the sender i can only receive x amount of data so don't send me more. This field can be set to handle data flow. At times the receiver will set the window size to 0 because it is overwhelmed with data but will change the field once it is ready to handle more data
-    5. Checksum
+    8. Checksum
       * This field is used to check id the header was damaged/incomplete while in transit to the destination.
-    6. Urgent pointer
+    9. Urgent pointer
       * point to the first urgent data byte in the packet. When this field is set the stack receiving the packet automatically stops all that is doing to deliver this packet.
-    7. Options
+    10. Options
       * Is used to set various TCP option that are not required
 
 3. How does the network protocol guarantee that a TCP/IP packet is complete after transmission?
