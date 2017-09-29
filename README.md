@@ -67,8 +67,8 @@ OpenGL, DirectX, WebGL. CUDA, GLSL
 
 # Assignment:
 
-1. The minimum seek time for an HDD is 9msec, and the maximum seek time is 90msec. The block size of this HDD is 4KB. How long on average does it take to read 100MB of data?
-   *
+1. The minimum seek time for an HDD is 9msec, and the maximum seek time is 90msec. The block size of this HDD is 4KB. How long on average does it take to read 100MB. of data?
+   * It depends on the operation being processed. We should take into consideration if the data is a sequential read, sequential write, random read, or random write.
 
 2. Describe a TCP/IP packet in detail. Describe the header, how many bytes it is, and which components it contains. What data can come after the header?
    * The TCP/IP packet is used in communication between mediums. TCP is know for assuring packets get where they are intended. TCP packets are sent in an unstructured manner and are assembled in order by the receiving medium. The headers in the packets are the following.
@@ -77,7 +77,7 @@ OpenGL, DirectX, WebGL. CUDA, GLSL
     2. Sequence Number
        * Is the number given to to the first byte of the current packet. The the number is used to keep the session alive and to keep track of the number of bytes that have been transmitted.
     3. Acknowledgement number
-       * The ack number is closely related to the syn number. The ack number has  the same mechanism as the syn and both are used to keep track of bytes sent and are also used to determine packet loss.
+       * The ack number is closely related to the syn number. The ack number has the same mechanism as the syn and both are used to keep track of bytes sent and are also used to determine packet loss.
     4. Data offset
        * This field contains a number used to determine where the header ends and where the data starts. For ex. a 120 byte packet can have an offset of 5 which you multiply by 4 (bytes) which gives you 20 then the header is 20 bytes and the data is 100 bytes.
     5. Reserved
